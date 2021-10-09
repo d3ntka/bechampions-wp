@@ -1,0 +1,65 @@
+html {
+    font-size: 62.5%; //1rem = 10px
+    // overflow-x: hidden;
+    background-color: $dark;
+}
+
+body {
+font-size: 1.4rem;
+overflow-x: hidden;
+color: #fff;
+// line-height: 1.7;
+letter-spacing: 0.28px;
+background-color: $dark;
+}
+
+h1{
+    text-align: left;
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 0.96px;
+}
+
+.primary{
+    color: $primary;
+}
+.secondary{
+    color: $secondary;
+}
+.grey{
+    color: $grey;
+}
+
+.center-text{
+    text-align: center;
+}
+
+
+.btn{
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    border-radius: 0;
+    display: inline-block;
+    color: #fff;
+    padding: 1.2rem 3.5rem;
+    &:hover{
+        color: #fff;
+    }
+}
+.btn-dark{
+    background-color: $dark;
+    &:hover{
+        background-color: $secondary;
+    }
+}
+.btn-secondary{
+
+}
+
+.title{
+    font-size: 1.8rem;
+    color: $primary;
+    letter-spacing: 0.36px;
+    font-weight: 800;
+}

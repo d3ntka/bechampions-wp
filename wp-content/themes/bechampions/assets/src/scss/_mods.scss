@@ -1,0 +1,74 @@
+.swiper{
+    --swiper-navigation-size:1.2rem;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-size: 2rem;
+    // width: 670px;
+    height: 270px;
+    overflow-x: visible;
+    overflow-y: hidden;
+
+}
+
+$swiper-nav-loc: 0px;
+.swiper-pagination-bullets {
+    --swiper-theme-color: #{$primary};
+    left: $swiper-nav-loc;
+    top: 50%;
+    -webkit-transform: translate3d(0,-50%,0);
+    transform: translate3d(0,-50%,0);
+    width: fit-content;
+}
+.swiper-pagination-bullet {
+    border: 2px solid #fff;
+    --swiper-navigation-size:2rem;
+    --swiper-pagination-bullet-inactive-color: transparent;
+}
+.swiper-pagination-bullet-active {
+    border: 2px solid $primary;
+
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    --swiper-theme-color: #fff;
+    right: auto;
+    left: $swiper-nav-loc;
+    transform: rotate(90deg) translateY(-50%);
+    top: 30%;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    --swiper-theme-color: #fff;
+    right: auto;
+    left: $swiper-nav-loc;
+    transform: rotate(90deg) translateY(-50%);
+    top: 70%;
+}
+
+
+// EVENT CALENDAR
+.home{
+    .mec-event-article{
+        background-color: rgba(#fff,0.05);
+        // backdrop-filter: blur(19px);
+    }
+    @supports (backdrop-filter: blur(19px)){
+        .mec-event-article{
+            backdrop-filter: blur(19px);
+        }
+    }
+    .mec-month-divider {
+        display: none;
+    }
+    .mec-event-list-classic .mec-event-title {
+        margin-top: 0;
+    }
+    .mec-event-date{
+        float: right;
+    }
+    .mec-event-list-classic .mec-event-article {
+        padding: 3.2rem 4.5rem 3.4rem 5rem;
+    }
+    .mec-event-time{
+        display: none;
+    }
+}

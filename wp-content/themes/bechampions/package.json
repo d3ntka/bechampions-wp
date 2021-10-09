@@ -16,9 +16,10 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "bootstrap": "^5.0.2",
     "@popperjs/core": "^2.9.2",
-    "jquery": "^3.6.0"
+    "bootstrap": "^5.0.2",
+    "jquery": "^3.6.0",
+    "swiper": "^7.0.8"
   },
   "devDependencies": {
     "browser-sync": "^2.27.5",

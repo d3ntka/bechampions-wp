@@ -1,5 +1,6 @@
 // Webpack Imports
 import * as bootstrap from 'bootstrap';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 
 ( function () {
@@ -23,4 +24,23 @@ import * as bootstrap from 'bootstrap';
 			trigger: 'focus',
 		} );
 	} );
+} )();
+
+( function () {
+	Swiper.use([Navigation, Pagination]);
+	const swiper = new Swiper("#news-swiper", {
+		direction: 'vertical',
+		// loop: true,
+		rewind: true,
+		// If we need pagination
+		pagination: {
+		el: '.swiper-pagination',
+		},
+	
+		// Navigation arrows
+		navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+		},
+	});
 } )();

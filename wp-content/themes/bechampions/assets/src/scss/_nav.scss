@@ -1,0 +1,28 @@
+#footer{
+    background-color: $dark;
+}
+
+
+.footer{
+    &__text{
+        padding: 4rem 0;
+        &--a{
+            font-size: 6.1rem;
+            font-size: 700;
+            letter-spacing: 1.83px;
+        }
+        &--b{
+            font-size: 3.2rem;
+            font-size: 700;
+            letter-spacing: 0.96px;
+            line-height: 1.1;
+        }
+    }
+    &__menu{
+        border-top: 1px solid $grey;
+        padding: 3.5rem 3rem;
+    }
+    &__logo{
+        margin: 3rem 0;
+    }
+}

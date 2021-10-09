@@ -501,3 +501,22 @@ function bechampions_scripts_loader() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'bechampions_scripts_loader' );
+
+
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+		'page_title' 	=> 'Opcje motywu',
+		'menu_title'	=> 'Opcje motywu',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}
+
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

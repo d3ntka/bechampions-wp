@@ -8,17 +8,28 @@
 						get_sidebar();
 					?>
 
-				</div><!-- /.row -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
 			<?php
 				endif;
 			?>
 		</main><!-- /#main -->
 		<footer id="footer">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<p><?php printf( esc_html__( '&copy; %1$s %2$s. All rights reserved.', 'bechampions' ), date_i18n( 'Y' ), get_bloginfo( 'name', 'display' ) ); ?></p>
+				<div class="row justify-content-around align-items-center footer__text">
+					<div class="col-md-6 center-text footer__text--a">
+						Valorant to <span class="secondary">my</span>
 					</div>
+					<div class="col-md-6 center-text footer__text--b">
+						<div>
+							Stań się częścią projektu już dziś.
+						</div>
+						<div class="secondary">
+							Oglądaj. Graj. Czuj. BeChampions
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
 
 					<?php
 						if ( has_nav_menu( 'footer-menu' ) ) : // See function register_nav_menus() in functions.php
@@ -31,9 +42,9 @@
 								array(
 									'theme_location'  => 'footer-menu',
 									'container'       => 'nav',
-									'container_class' => 'col-md-6',
+									'container_class' => 'col-md-6 footer__menu',
 									'fallback_cb'     => '',
-									'items_wrap'      => '<ul class="menu nav justify-content-end">%3$s</ul>',
+									'items_wrap'      => '<ul class="menu nav justify-content-around">%3$s</ul>',
 									//'fallback_cb'    => 'WP_Bootstrap4_Navwalker_Footer::fallback',
 									'walker'          => new WP_Bootstrap4_Navwalker_Footer(),
 								)
@@ -57,6 +68,25 @@
 						endif;
 					?>
 				</div><!-- /.row -->
+				<div class="row justify-content-center">
+					<div class="col-auto footer__logo">
+
+						<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+							<?php
+								$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
+
+								if ( ! empty( $header_logo ) ) :
+							?>
+								<img src="<?php echo esc_url( $header_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+							<?php
+								else :
+									echo esc_attr( get_bloginfo( 'name', 'display' ) );
+								endif;
+							?>
+						</a>
+					</div>
+
+				</div>
 			</div><!-- /.container -->
 		</footer><!-- /#footer -->
 	</div><!-- /#wrapper -->

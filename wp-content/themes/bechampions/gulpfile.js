@@ -2,7 +2,7 @@ const gulp = require( 'gulp' ),
 	fancylog = require( 'fancy-log' ),
 	browserSync = require( 'browser-sync' ),
 	server = browserSync.create(),
-	dev_url = 'http://localhost/starter-bootstrap';
+	dev_url = 'bechampions.test';
 
 
 /**
@@ -11,11 +11,11 @@ const gulp = require( 'gulp' ),
 
 var paths = {
 	styles: {
-		src: './assets/*.scss',
+		src: './assets/src/scss/*.scss',
 		dest: './assets/css'
 	},
 	scripts: {
-		src: './assets/*.js',
+		src: './assets/src/js/*.js',
 		dest: './assets/js'
 	}
 };
@@ -42,9 +42,9 @@ function build_js() {
 		.pipe(
 			gulp.dest( paths.scripts.dest )
 		)
-		/*.pipe(
+		.pipe(
 			server.stream() // Browser Reload
-		)*/;
+		);
 }
 
 
@@ -83,9 +83,9 @@ function build_css() {
 		.pipe(
 			gulp.dest( paths.styles.dest )
 		)
-		/*.pipe(
+		.pipe(
 			server.stream() // Browser Reload
-		)*/;
+		);
 }
 
 /**
@@ -97,11 +97,11 @@ function build_css() {
 gulp.task( 'watch',
 	function () {
 		// Modify "dev_url" constant and uncomment "server.init()" to use browser sync
-		/*server.init({
+		server.init({
 			proxy: dev_url,
-		} );*/
+		} );
 
 		gulp.watch( paths.scripts.src, build_js );
-		gulp.watch( [ paths.styles.src, './assets/scss/*.scss' ], build_css );
+		gulp.watch( [ paths.styles.src, './assets/src/scss/*.scss' ], build_css );
 	}
 );
