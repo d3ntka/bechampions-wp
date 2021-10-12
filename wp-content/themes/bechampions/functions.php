@@ -520,3 +520,52 @@ function cc_mime_types($mimes) {
     return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+
+function bechampions_register_post_type() {
+	$args = [
+		'label'  => esc_html__( 'Teams', 'text-domain' ),
+		'labels' => [
+			'menu_name'          => esc_html__( 'Teams', 'bechampions' ),
+			'name_admin_bar'     => esc_html__( 'Team', 'bechampions' ),
+			'add_new'            => esc_html__( 'Add Team', 'bechampions' ),
+			'add_new_item'       => esc_html__( 'Add new Team', 'bechampions' ),
+			'new_item'           => esc_html__( 'New Team', 'bechampions' ),
+			'edit_item'          => esc_html__( 'Edit Team', 'bechampions' ),
+			'view_item'          => esc_html__( 'View Team', 'bechampions' ),
+			'update_item'        => esc_html__( 'View Team', 'bechampions' ),
+			'all_items'          => esc_html__( 'All Teams', 'bechampions' ),
+			'search_items'       => esc_html__( 'Search Teams', 'bechampions' ),
+			'parent_item_colon'  => esc_html__( 'Parent Team', 'bechampions' ),
+			'not_found'          => esc_html__( 'No Teams found', 'bechampions' ),
+			'not_found_in_trash' => esc_html__( 'No Teams found in Trash', 'bechampions' ),
+			'name'               => esc_html__( 'Teams', 'bechampions' ),
+			'singular_name'      => esc_html__( 'Team', 'bechampions' ),
+		],
+		'public'              => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'show_ui'             => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'show_in_rest'        => true,
+		'capability_type'     => 'post',
+		'hierarchical'        => false,
+		'has_archive'         => true,
+		'query_var'           => true,
+		'can_export'          => true,
+		'rewrite_no_front'    => false,
+		'show_in_menu'        => true,
+		'menu_icon'           => 'dashicons-groups',
+		'supports' => [
+			'title',
+			'thumbnail',
+			'custom-fields',
+		],
+		
+		'rewrite' => true
+	];
+
+	register_post_type( 'team', $args );
+}
+add_action( 'init', 'bechampions_register_post_type' );

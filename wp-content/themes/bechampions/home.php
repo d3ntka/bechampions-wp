@@ -24,7 +24,6 @@ $the_query = new WP_Query( $query_args );
 <div class="home">
 
 <section class="news">
-
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -51,11 +50,11 @@ $the_query = new WP_Query( $query_args );
                         $the_query->the_post();
                         echo '<div class="swiper-slide">';
                             echo '<div class="news__cont">';
-                                echo '<div class="news__title">';
+                                echo '<div class="news__title pb-4">';
                                     the_title();
                                 echo '</div>';
 
-                                echo '<div class="news__body">';
+                                echo '<div class="news__body pb-3">';
                                     the_excerpt();
                                 echo '</div>';
 
@@ -80,7 +79,7 @@ $the_query = new WP_Query( $query_args );
 
                 ?>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-5 offset-lg-1">
                 <div class="tournaments">
                     <div class="d-flex justify-content-between">
                         <div class="tournaments__closest grey">
@@ -103,41 +102,38 @@ $the_query = new WP_Query( $query_args );
             </div>
         </div>
     </div>
+    <section class="sponsors__cont">
+        <?php get_template_part("template-parts/sponsors") ; ?>
+    </section>
+    
 
-</section>
-<section class="sponsors">
-<div class="container">
-    <div class="row">
-        <div class="col grey">Sponsorują nas</div>
-    </div>
-    <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-    </div>
-</div>
+		
+
 </section>
 
 
 <section class="about d-flex align-items-center" id="about">
     <div class="container">
-        <div class="row align-items-center">
-                <div class="col-md-6">
+        <div class="row align-items-center justify-content-between">
+                <div class="col-lg-5">
                     <div>
                         <div class="title">
                             Kim jesteśmy?
                         </div>
-                        <h1 class="mb-5">
+                        <h1 class="mt-4 mb-5">
                             Czym jest BeChampions?
                         </h1>
                         <p>
                             BeChampions to miejsce w którym ambitni gracze Valoranta mają szansę stanąć na prawdziwej scenie esportowej i spełnić swoje marzenia! 
                         </p>
+                        <br>
                         <p>
                             Tutaj będzie pewnie coś jeszcze, więc dodaję to żeby tekst był w miarę dokładny!
                         </p>
                     </div>
+                </div>
+                <div class="col-lg-auto d-flex align-items-center justify-content-center mt-5 mt-lg-0">
+                    <img class="about__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/sygnet-fill.svg" alt="">
                 </div>
         </div>
     </div>

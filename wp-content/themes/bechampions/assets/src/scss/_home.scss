@@ -1,5 +1,7 @@
 .home{
     .news{
+        padding-top: 6rem;
+        background: linear-gradient(180deg, rgba($dark,0) 50%, rgba($dark,1) 100%); 
         &__cont{
             
         }
@@ -15,22 +17,58 @@
         }
     }
 
+
     .tournaments{
 
     }
 
     .about{
-        min-height: 60rem;
+        position: relative;
+        min-height: 80rem;
+        z-index: 100;
+        border-top: 1px solid #FFF;
+        border-bottom: 1px solid #FFF;
+        background-color: $dark;
+        p{
+            line-height: 3;
+        }
+        &__logo{
+            max-width: 50rem;
+            height: auto;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            background: url("../img/bg/triangle_red.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 23rem;
+            height: 20rem;
+            display: block;
+            top:0;
+            left: 25%;
+            z-index: -1;
+            transform: translateX(-200%);
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            background: url("../img/bg/fancy_r.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 115rem;
+            height: 110rem;
+            display: block;
+            top:0;
+            right: 30%;
+            z-index: -1;
+            transform: translateY(-10%) translateX(50%);
+            @include media-breakpoint-down(lg){
+                justify-content: center;
+                transform: translateY(-10%) translateX(70%);
+            }
+        }
     }
-
-
-
-
-
-
-
-
-
-
 
 }

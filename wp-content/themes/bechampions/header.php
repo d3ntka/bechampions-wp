@@ -8,7 +8,7 @@
 </head>
 
 <?php
-	$navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-dark bg-dark' ); // Get custom meta-value.
+	$navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-dark' ); // Get custom meta-value.
 	$navbar_position = get_theme_mod( 'navbar_position', 'static' ); // Get custom meta-value.
 
 	$search_enabled  = get_theme_mod( 'search_enabled', '0' ); // Get custom meta-value.
@@ -22,6 +22,9 @@
 
 <div id="wrapper">
 	<header>
+		<div class="navbar-gfx">
+			<img class="navbar-gfx--sg" src="<?php echo get_template_directory_uri(); ?>/assets/img/bg/sygnet-outline.png"></img>
+		</div>
 		<nav id="header" class="navbar navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -49,7 +52,7 @@
 							array(
 								'theme_location' => 'main-menu',
 								'container'      => '',
-								'menu_class'     => 'navbar-nav me-auto',
+								'menu_class'     => 'navbar-nav mx-auto',
 								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
 								'walker'         => new WP_Bootstrap_Navwalker(),
 							)
@@ -78,7 +81,7 @@
 		?>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-sm-12">
+					<div class="col-md-12 col-sm-12">
 		<?php
 			endif;
 		?>

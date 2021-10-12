@@ -4,9 +4,7 @@
 			?>
 					</div><!-- /.col -->
 
-					<?php
-						get_sidebar();
-					?>
+
 
 					</div><!-- /.row -->
 				</div><!-- /.container -->
@@ -14,7 +12,7 @@
 				endif;
 			?>
 		</main><!-- /#main -->
-		<footer id="footer">
+		<footer id="footer" class="footer">
 			<div class="container">
 				<div class="row justify-content-around align-items-center footer__text">
 					<div class="col-md-6 center-text footer__text--a">

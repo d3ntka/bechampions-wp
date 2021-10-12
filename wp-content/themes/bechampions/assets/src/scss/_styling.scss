@@ -43,7 +43,7 @@ h1{
     display: inline-block;
     color: #fff;
     padding: 1.2rem 3.5rem;
-    &:hover{
+    &:hover,&:focus,&:active{
         color: #fff;
     }
 }
@@ -62,4 +62,10 @@ h1{
     color: $primary;
     letter-spacing: 0.36px;
     font-weight: 800;
+}
+
+
+#main{
+    z-index: 50;
+    position: relative;
 }
