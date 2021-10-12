@@ -4,6 +4,8 @@ $secondary: #FB9E27;
 $grey: #FFFFFF7F;
 
 $navbar-dark-color: rgba(255,255,255, 1);
-$navbar-dark-hover-color: rgba(255,255,255, 0.8);
+$navbar-dark-hover-color: $secondary;
 $navbar-dark-disabled-color: rgba(255,255,255, 0.3);
-$navbar-dark-active-color: rgba(255,255,255, 1);
+$navbar-dark-active-color: $primary;
+
+$transition: 0.2s ease-in-out;
