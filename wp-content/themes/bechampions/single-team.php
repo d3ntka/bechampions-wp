@@ -34,9 +34,9 @@ if ( $count_posts->publish > '1' ) :
 			$prev_title = get_the_title( $prev_post->ID );
 	?>
 		<div class="pr-3">
-			<a class="previous-post btn btn-lg btn-outline-secondary" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>" title="<?php echo esc_attr( $prev_title ); ?>">
-				<span class="arrow">&larr;</span>
-				<span class="title"><?php echo wp_kses_post( $prev_title ); ?></span>
+			<a class="previous-post btn btn-secondary d-flex align-items-center" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>" title="<?php echo esc_attr( $prev_title ); ?>">
+				<span class="chevron-left"></span>
+				<span class=""><?php echo wp_kses_post( $prev_title ); ?></span>
 			</a>
 		</div>
 	<?php
@@ -45,9 +45,9 @@ if ( $count_posts->publish > '1' ) :
 			$next_title = get_the_title( $next_post->ID );
 	?>
 		<div class="pl-3">
-			<a class="next-post btn btn-lg btn-outline-secondary" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" title="<?php echo esc_attr( $next_title ); ?>">
-				<span class="title"><?php echo wp_kses_post( $next_title ); ?></span>
-				<span class="arrow">&rarr;</span>
+			<a class="next-post btn btn-secondary d-flex align-items-center" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" title="<?php echo esc_attr( $next_title ); ?>">
+				<span class=""><?php echo wp_kses_post( $next_title ); ?></span>
+				<span class="chevron-right"></span>
 			</a>
 		</div>
 	<?php

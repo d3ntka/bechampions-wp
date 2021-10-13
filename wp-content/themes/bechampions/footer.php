@@ -10,6 +10,39 @@
 				</div><!-- /.container -->
 			<?php
 				endif;
+				if ( is_front_page() && is_home() ) {
+					// Default homepage
+					
+					} elseif ( is_front_page()){
+					// Static homepage
+					
+					} elseif ( is_home()){
+					
+					// Blog page
+					
+					} else {
+					// Everything else
+					?>
+						<?php if ( have_rows( 'options_sponsors', 'options' ) ) : ?>
+					<div class="sponsors sponsors__fixed container-fluid">
+					<div class="row sponsors__logos align-items-center">
+						<div class="col-3 col-lg-2 sponsors__title grey">Sponsorują nas</div>
+						<?php while ( have_rows( 'options_sponsors', 'options' ) ) :
+						the_row(); ?>
+							<?php
+							$options_sponsor = get_sub_field( 'options_sponsor', 'options' );
+							if ( $options_sponsor ) : ?>
+								<div class="col-4 col-lg-2 sponsors__logo">
+									<img src="<?php echo esc_url( $options_sponsor['url'] ); ?>" alt="<?php echo esc_attr( $options_sponsor['alt'] ); ?>" />
+								</div>
+							<?php endif; ?>
+						<?php endwhile; ?>
+        			</div>
+
+					</div>
+    				<?php endif; ?>
+					<?php 
+					}
 			?>
 		</main><!-- /#main -->
 		<footer id="footer" class="footer">

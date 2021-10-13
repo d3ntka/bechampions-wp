@@ -86,16 +86,16 @@
         padding: 3.5rem 3rem;
     }
     &__logo{
-        margin: 3rem 0;
+        margin: 6rem 0;
     }
     &::after{
         content: "";
         position: absolute;
         background: url("../img/bg/footer.png");
         background-repeat: no-repeat;
-        background-size: contain;
-        width: 100%;
-        height: auto;
+        background-size: cover;
+        width: 83rem;
+        height: 27rem;
         display: block;
         bottom: 0;
         right: 0;
@@ -147,5 +147,10 @@
         bottom: 0vh;
         z-index: 1500;
         background-color: $dark; 
+        width: 100vw;
+        padding: 1rem;
+        .sponsors__title{
+            padding: 0;
+        }
     }
 }

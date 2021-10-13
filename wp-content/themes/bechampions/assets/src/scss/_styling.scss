@@ -61,6 +61,20 @@ a{
 
 }
 
+.vlr-btn{
+    background-color: #fff;
+    color: $dark;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        background-color: $dark;
+        color: #fff;
+    }
+}
+
+
 .title{
     font-size: 1.8rem;
     color: $primary;
@@ -118,4 +132,62 @@ path{
     background-image: url("../img/icons/icon_trophy.svg");
     width:3.4rem;
     height: 4.2rem;
+}
+.icon-ranking{
+    background-image: url("../img/icons/icon_ranking.svg");
+    width: 4rem;
+    height: 4rem;
+}
+
+.chevron-left {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 100px
+}
+.chevron-left::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    left: 6px;
+    top: 4px
+}
+
+.chevron-right {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 100px
+}
+.chevron-right::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(-45deg);
+    right: 6px;
+    top: 4px
+}
+
+.background-blur{
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    backdrop-filter: blur(19px);
 }

@@ -569,3 +569,8 @@ function bechampions_register_post_type() {
 	register_post_type( 'team', $args );
 }
 add_action( 'init', 'bechampions_register_post_type' );
+
+
+function formatNum($num){
+    return sprintf("%+d",$num);
+}

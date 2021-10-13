@@ -1,0 +1,100 @@
+
+.single-team{
+    & .team{
+        --thumb-size: 23rem;
+        --photo-size: 18rem;
+        &__thumb{
+            padding: 0;
+            border-radius: 1.5rem;
+            width: var(--thumb-size);
+            height: var(--thumb-size);
+            display: flex;
+            align-items: center;
+            background-color: #FFF;
+            img{
+            }
+        }
+        &__player{
+            padding: 0 0.5rem;
+            &--img{
+                background-color: rgba($color: #3E4C54, $alpha: 0.3);
+                backdrop-filter: blur(19px);
+                max-width: var(--photo-size);
+                max-height: var(--photo-size);
+                border-radius: 1.5rem;
+                img{
+                    object-fit: cover;
+                    object-position: center top;
+                    width: 100%;
+                    height: auto;
+                }
+                overflow: hidden;
+            }
+            &--name{
+                padding-top: 2.5rem;
+                font-size: 1.8rem;
+                letter-spacing: 0.2px;
+                color: rgba($color: #FFF, $alpha: 0.5);
+                text-align: center;
+            }
+        }
+        &__coach{
+            padding-top: 2.5rem;
+            font-size: 1.8rem;
+            letter-spacing: 0.2px;
+            color: rgba($color: #FFF, $alpha: 0.5);
+            text-align: center;
+        }
+        &__ranking{
+            &--cont{
+                position: relative;
+                @extend .background-blur;
+                padding: 2rem 4rem 4rem 4rem;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 8px;
+                    background-color: rgba($blue, 0.5);
+                }
+            }
+            &--title{
+                @extend .title;
+                color: #FFF;
+                display: flex;
+                align-items: center;
+                padding-bottom: 3rem;
+                span{
+                    padding-left: 5rem;
+                }
+            }
+            &--event{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                padding: 1rem 0;
+            }
+            &--date{
+                color: rgba($color: #FFF, $alpha: 0.5);
+                font-size: 1.8rem;
+                font-weight: 300;
+                flex: 1;
+            }
+            &--points{
+                color: $secondary;
+                font-size: 2.8rem;
+                font-weight: 700;
+                flex: 1;
+
+            }
+            &--name{
+                font-size: 1.8rem;
+                font-weight: 800;
+                flex: 2;
+                
+            }
+        }
+    }
+}
