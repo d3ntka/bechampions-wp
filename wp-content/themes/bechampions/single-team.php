@@ -27,7 +27,7 @@ if ( $count_posts->publish > '1' ) :
 	$next_post = get_next_post();
 	$prev_post = get_previous_post();
 ?>
-<hr class="mt-5">
+
 <div class="post-navigation d-flex justify-content-between">
 	<?php
 		if ( $prev_post ) {
@@ -35,7 +35,7 @@ if ( $count_posts->publish > '1' ) :
 	?>
 		<div class="pr-3">
 			<a class="previous-post btn btn-secondary d-flex align-items-center" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>" title="<?php echo esc_attr( $prev_title ); ?>">
-				<span class="chevron-left"></span>
+				<span class="chevron chevron-left"></span>
 				<span class=""><?php echo wp_kses_post( $prev_title ); ?></span>
 			</a>
 		</div>
@@ -47,7 +47,7 @@ if ( $count_posts->publish > '1' ) :
 		<div class="pl-3">
 			<a class="next-post btn btn-secondary d-flex align-items-center" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" title="<?php echo esc_attr( $next_title ); ?>">
 				<span class=""><?php echo wp_kses_post( $next_title ); ?></span>
-				<span class="chevron-right"></span>
+				<span class="chevron chevron-right"></span>
 			</a>
 		</div>
 	<?php

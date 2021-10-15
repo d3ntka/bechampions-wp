@@ -1,0 +1,141 @@
+.ranking {
+    padding-bottom: 20rem;
+    &__title{
+        padding-bottom: 3.5rem;
+        .title{
+            padding-bottom: 1.5rem;
+        }
+    }
+    .team{
+        font-size: 1.8rem;
+        @extend .background-blur;
+        padding: 2.5rem 2.8rem;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 8px;
+            background-color: rgba(#FFF, 0.5);
+        }
+        &:nth-child(1)::before{
+            background-color: rgba($secondary, 1);
+        }
+        &:nth-child(2)::before{
+            background-color: rgba($secondary, .75);
+        }
+        &:nth-child(3)::before{
+            background-color: rgba($secondary, .5);
+        }
+
+        &__about{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include media-breakpoint-down(lg){
+                justify-content: flex-start;
+            }
+            &--nr{
+                color: $blue;
+                font-weight: 800;
+                letter-spacing: 0.2rem;
+                white-space: nowrap;
+            }
+            &--thumb{
+                width: 3rem;
+                height: 3rem;
+                // padding-left: 1rem;
+                margin: 0;
+            }
+            &--name{
+                font-weight: 800;
+                // padding-left: 1rem;
+                margin: 0;
+            }
+            &--points{
+                // padding-left: 1rem;
+                font-weight: 300;
+                color: rgba($color: #FFF, $alpha: 0.5);
+            }
+        }
+        &__links{
+            padding: 5rem 0;
+            // display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    width: 14rem;
+                    height: 5rem;
+                    padding: 0;
+                }
+            }
+        }
+
+        &__player{
+            --photo-size: 14rem;
+            padding: 0 0.5rem;
+            flex: 1;
+            &--cont{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &--img{
+                background-color: rgba($color: #3E4C54, $alpha: 0.3);
+                backdrop-filter: blur(19px);
+                max-width: var(--photo-size);
+                max-height: var(--photo-size);
+                border-radius: 1.5rem;
+                margin: 0 auto;
+                // margin-bottom: 2.5rem;
+
+                img{
+                    object-fit: cover;
+                    object-position: center top;
+                    width: 100%;
+                    height: auto;
+                }
+                overflow: hidden;
+            }
+            &--spacer{
+                height: 2.5rem;
+            }
+            &--name{
+                font-size: 1.8rem;
+                letter-spacing: 0.2px;
+                color: rgba($color: #FFF, $alpha: 0.5);
+                text-align: center;
+            }
+        }
+        
+    }
+
+
+
+
+
+
+
+    .btn-tm{
+        position: absolute;
+        top: 2.5rem;
+        right: 3rem;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+        color: $blue;
+        &.collapsed{
+            span::after{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+}

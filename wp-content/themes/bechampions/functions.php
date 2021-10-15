@@ -574,3 +574,15 @@ add_action( 'init', 'bechampions_register_post_type' );
 function formatNum($num){
     return sprintf("%+d",$num);
 }
+
+function acf_sum_point($post_id)
+{
+	$total = 0;
+    while ( have_rows( 'team_ranking' ) ) : the_row();
+        $total += intval( get_sub_field( 'team_ranking_points' ) ); 
+    endwhile;
+	$value = $total;
+	$field_name = "field_61697162b4bc9";
+	update_field($field_name, $value, $post_id);
+}
+add_action('acf/save_post', 'acf_sum_point', 20);

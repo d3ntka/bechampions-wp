@@ -4,18 +4,17 @@
  *
  */
 
-$global_ranking_points = 0;
 ?>
 
 <article id="team-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<a href="<?php get_home_url()?>/ranking/" class="title d-inline-flex align-items-center"><i class="chevron-left"></i> <span>Powrót do rankingu</span></a>
+	<a href="<?php get_home_url()?>/ranking/" class="title d-inline-flex align-items-center"><i class="chevorn chevron-left"></i> <span>Powrót do rankingu</span></a>
 
 	<div class="d-flex justify-content-between align-items-center">
 		<h1 class=""><?php the_title(); ?></h1>
 		<?php if ( $team_vlrgg = get_field( 'team_vlrgg' ) ) : ?>
 			<div>
 				<a class="btn vlr-btn" href="<?php echo esc_url( $team_vlrgg ); ?>">
-					VLR.GG <i class="chevron-right"></i>
+					VLR.GG <i class="chevron chevron-right"></i>
 				</a>
 			</div>
 		<?php endif; ?>
@@ -87,18 +86,9 @@ $global_ranking_points = 0;
 							<?php endif; ?>
 						</div>
 					</div>
-					<?php $global_ranking_points += $team_ranking_points; ?>
 				<?php endwhile; ?>
 			</div>
 		</div>
 	<?php endif; ?>
-
-
-
-		
-
-
-
-
 
 </article><!-- /#post-<?php the_ID(); ?> -->

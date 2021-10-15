@@ -19,7 +19,48 @@
 
 
     .tournaments{
+        &__closest{
+            font-weight: 800;
+            font-size: 1.8rem;
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            opacity: 0.5;
+            i{
+                margin-right: 1rem;
+            }
+        }
+        &__more{
+            color: rgba(#fff, 0.5);
+            font-weight: 300;
+            margin: auto 0;
+            &:hover{
+                color: #fff;
+            }
+        }        
 
+        .mec-event-article{
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 8px;
+                background-color: rgba($secondary, 0.5);
+            }
+            &:last-of-type::before{
+                background-color: rgba($secondary, 1);
+            }
+        }
+
+
+        .mec-event-title,
+        .mec-start-date-label{
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
     }
 
     .about{

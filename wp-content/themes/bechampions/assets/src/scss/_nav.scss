@@ -131,12 +131,19 @@
         }
         img{
             max-width: 150px;
+            transition: $transition;
+            transition-duration: 0.3s;
+            &:hover{
+                transform-origin: center;
+                transform: scale(1.2);
+            }
         }
     }
     &__logo{
         display: flex;
         align-items: center;
         padding-right: 2rem;
+
         @include media-breakpoint-down(md){
             justify-content: center;
             margin-bottom: 1rem;
@@ -148,7 +155,8 @@
         z-index: 1500;
         background-color: $dark; 
         width: 100vw;
-        padding: 1rem;
+        padding: 1rem 3rem;
+        border-top: 1px solid rgba($secondary, 0.5);
         .sponsors__title{
             padding: 0;
         }

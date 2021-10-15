@@ -81,11 +81,12 @@ $the_query = new WP_Query( $query_args );
             </div>
             <div class="col-lg-5 offset-lg-1">
                 <div class="tournaments">
-                    <div class="d-flex justify-content-between">
-                        <div class="tournaments__closest grey">
+                    <div class="d-flex justify-content-between mb-4">
+                        <div class="tournaments__closest">
+                            <i class="icon-trophy"></i>
                             Najbliższy turniej
                         </div>
-                        <a href="" class="tournaments__more">
+                        <a href="/events" class="tournaments__more">
                             Zobacz wszystkie
                         </a>
                     </div>

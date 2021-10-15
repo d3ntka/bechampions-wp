@@ -144,7 +144,7 @@ body.admin-bar {
 .post-thumbnail,
 .wp-video,
 .embed-responsive {
-	margin: 5px 0;
+	margin: 0;
 	width: 100% !important;
 }
 
@@ -363,3 +363,4 @@ body.admin-bar {
 @import 'home';
 @import 'mods';
 @import 'team';
+@import 'ranking';

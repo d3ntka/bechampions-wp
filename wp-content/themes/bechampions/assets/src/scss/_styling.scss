@@ -44,7 +44,9 @@ a{
     font-weight: 800;
     letter-spacing: 0.8px;
     border-radius: 0;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     padding: 1.2rem 3.5rem;
     &:hover,&:focus,&:active{
@@ -64,10 +66,6 @@ a{
 .vlr-btn{
     background-color: #fff;
     color: $dark;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
     &:hover{
         background-color: $dark;
         color: #fff;
@@ -139,7 +137,7 @@ path{
     height: 4rem;
 }
 
-.chevron-left {
+.chevron {
     box-sizing: border-box;
     position: relative;
     display: block;
@@ -147,9 +145,11 @@ path{
     width: 22px;
     height: 22px;
     border: 2px solid transparent;
-    border-radius: 100px
+    border-radius: 100px;
+    transition: $transition;
+
 }
-.chevron-left::after {
+.chevron::after {
     content: "";
     display: block;
     box-sizing: border-box;
@@ -158,33 +158,25 @@ path{
     height: 10px;
     border-bottom: 2px solid;
     border-left: 2px solid;
-    transform: rotate(45deg);
+    // transform: rotate(45deg);
+    transition: $transition;
     left: 6px;
     top: 4px
 }
 
-.chevron-right {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    transform: scale(var(--ggs,1));
-    width: 22px;
-    height: 22px;
-    border: 2px solid transparent;
-    border-radius: 100px
-}
-.chevron-right::after {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
+.chevron-down::after{
     transform: rotate(-45deg);
-    right: 6px;
-    top: 4px
+}
+.chevron-up::after{
+    transform: rotate(135deg);
+}
+
+.chevron-left::after {
+    transform: rotate(45deg);
+}
+
+.chevron-right::after {
+    transform: rotate(-135deg);
 }
 
 .background-blur{
