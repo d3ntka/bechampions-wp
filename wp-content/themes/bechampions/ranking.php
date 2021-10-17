@@ -19,7 +19,7 @@ $query_args = array(
 	'post_status' => 'publish',
 	'order' => 'DESC',
 	'meta_key' => 'global_ranking_points',
-	'orderby' => 'meta_value',
+	'orderby' => 'meta_value_num',
 );
 
 // The Query
@@ -47,7 +47,6 @@ if ( $the_query->have_posts() ) { ?>
 		$the_query->the_post();
         $link = sanitize_title(get_the_title());
         ?>
-
         <div class="row team mb-3">
             <div class="col-lg-3">
                 <div class="team__about">
@@ -74,7 +73,7 @@ if ( $the_query->have_posts() ) { ?>
                         ?>
                     </div>
                 </div>
-                <div class="collapse" id="collapse-<?=$link?>">
+                <div class="collapse" id="collapse-<?=$link?>" onClick="event.stopPropagation();">
                     <div class="row team__links">
                         <div class="col">
                             <a class="btn btn-secondary" href="<?php echo get_permalink(); ?>">Drużyna</a>
@@ -95,11 +94,11 @@ if ( $the_query->have_posts() ) { ?>
                             <div class="team__player">
                                 <?php $team_member_img = get_sub_field( 'team_member_img' );
                                 if ( $team_member_img ) : ?>
-                                    <div class="team__player--img collapse" id="collapse-<?=$link?>">
+                                    <div class="team__player--img collapse collapsed" id="collapse-<?=$link?>">
                                         <img src="<?php echo esc_url( $team_member_img['url'] ); ?>" alt="<?php echo esc_attr( $team_member_img['alt'] ); ?>" />
                                     </div>
                                 <?php endif; ?>
-                                <div class="collapse" id="collapse-<?=$link?>">
+                                <div class="collapse collapsed" id="collapse-<?=$link?>">
                                     <div class="team__player--spacer"></div>
                                 </div>
 
@@ -114,7 +113,7 @@ if ( $the_query->have_posts() ) { ?>
                 <?php endif; ?>	
             </div>
             <div>
-                <button class="btn-tm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?=$link?>" aria-expanded="false" aria-controls="collapse-<?=$link?>">
+                <button class="btn-tm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?=$link?>" aria-expanded="false" aria-controls="collapse-<?=$link?>">
                     <span class="chevron chevron-up"></span>
                 </button>
             </div>
