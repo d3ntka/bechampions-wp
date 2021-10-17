@@ -96,8 +96,8 @@ $the_query = new WP_Query( $query_args );
                         <?php echo do_shortcode('[MEC id="33"]'); ?>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <a href="" class="btn btn-secondary">
-                            Zapisz się do turnieju
+                        <a href="https://twitch.tv/bechampions" class="btn btn-secondary">
+                            Oglądaj na Twitch.tv
                         </a>
                     </div>
 
@@ -131,7 +131,7 @@ $the_query = new WP_Query( $query_args );
                         </p>
                         <br>
                         <p>
-                            Nie czekaj - dołącz i stań się zawodnikiem, uczestnikim, widzem - stań się częścią Valorant.
+                            Nie czekaj - dołącz i stań się zawodnikiem, uczestnikiem, widzem - stań się częścią Valorant.
                         </p>
                     </div>
                 </div>
