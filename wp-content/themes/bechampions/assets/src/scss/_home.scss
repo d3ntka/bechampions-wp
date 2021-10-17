@@ -3,7 +3,7 @@
         padding-top: 6rem;
         background: linear-gradient(180deg, rgba($dark,0) 50%, rgba($dark,1) 100%); 
         &__cont{
-            
+            transform: translateX(-5rem);
         }
         &__title{
             text-align: left;

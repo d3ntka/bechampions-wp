@@ -26,58 +26,60 @@ $the_query = new WP_Query( $query_args );
 <section class="news">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="title">
-                    Gorące nowości
-                </div>
-                <?php
-                // The Loop
-                if ( $the_query->have_posts() ) {
-                ?>
-                <div class="swiper" id="news-swiper">
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
+            <div class="col-lg-5">
+                <div class="news__cont">
+                    <div class="title pl-5">
+                        Gorące nowości
+                    </div>
                     <?php
-                    while ( $the_query->have_posts() ) {
+                    // The Loop
+                    if ( $the_query->have_posts() ) {
+                    ?>
+                    <div class="swiper" id="news-swiper">
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
 
-                        $the_query->the_post();
-                        echo '<div class="swiper-slide">';
-                            echo '<div class="news__cont">';
-                                echo '<div class="news__title pb-4">';
-                                    the_title();
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <?php
+                        while ( $the_query->have_posts() ) {
+
+                            $the_query->the_post();
+                            echo '<div class="swiper-slide">';
+                                echo '<div class="">';
+                                    echo '<div class="news__title pb-4">';
+                                        the_title();
+                                    echo '</div>';
+
+                                    echo '<div class="news__body pb-3">';
+                                        the_content();
+                                    echo '</div>';
+
+                                    // echo '<a class="btn btn-dark" href="';
+                                    //     the_permalink();
+                                    // echo '">Zobacz więcej</a>';
                                 echo '</div>';
-
-                                echo '<div class="news__body pb-3">';
-                                    the_excerpt();
-                                echo '</div>';
-
-                                echo '<a class="btn btn-dark" href="';
-                                    the_permalink();
-                                echo '">Zobacz więcej</a>';
                             echo '</div>';
-                        echo '</div>';
-                    }?>
+                        }?>
 
+                    </div>
+
+
+                    </div>
+
+                    <?php 
+                        /* Restore original Post Data */
+                        wp_reset_postdata();
+                    } else {
+
+                    }
+
+                    ?>
                 </div>
-
-
-                </div>
-
-                <?php 
-                    /* Restore original Post Data */
-                    wp_reset_postdata();
-                } else {
-
-                }
-
-                ?>
             </div>
             <div class="col-lg-5 offset-lg-1">
                 <div class="tournaments">
@@ -125,11 +127,11 @@ $the_query = new WP_Query( $query_args );
                             Czym jest BeChampions?
                         </h1>
                         <p>
-                            BeChampions to miejsce w którym ambitni gracze Valoranta mają szansę stanąć na prawdziwej scenie esportowej i spełnić swoje marzenia! 
+                            BeChampions to miejsce w którym ambitni gracze Valorant mają szansę na rywalizację na prawdziwej scenie podczas finałów LAN-owych każdego miesiąca rozgrywek. To miejsce w którym wszyscy wspólnie pracują nad rozwinięciem sceny Valorant w Polsce. 
                         </p>
                         <br>
                         <p>
-                            Tutaj będzie pewnie coś jeszcze, więc dodaję to żeby tekst był w miarę dokładny!
+                            Nie czekaj - dołącz i stań się zawodnikiem, uczestnikim, widzem - stań się częścią Valorant.
                         </p>
                     </div>
                 </div>
