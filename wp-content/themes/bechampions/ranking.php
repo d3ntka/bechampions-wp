@@ -79,9 +79,11 @@ if ( $the_query->have_posts() ) { ?>
                             <a class="btn btn-secondary" href="<?php echo get_permalink(); ?>">Drużyna</a>
                         </div>
                         <div class="col">
+                        <?php if ( $team_vlrgg = get_field( 'team_vlrgg') ) : ?>
                             <a class="btn vlr-btn" href="<?php echo esc_url( $team_vlrgg ); ?>">
                                 VLR.GG
                             </a>
+                        <?php endif; ?>
                         </div>
                     </div>
                 </div>
