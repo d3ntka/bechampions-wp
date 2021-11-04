@@ -9,7 +9,7 @@
                 <?php
                 $options_sponsor = get_sub_field( 'options_sponsor', 'options' );
                 if ( $options_sponsor ) : ?>
-                    <div class="col-6 col-md-3 sponsors__logo">
+                    <div class="col-sm-6 col-md-3 col-xl-2 sponsors__logo">
                         <img src="<?php echo esc_url( $options_sponsor['url'] ); ?>" alt="<?php echo esc_attr( $options_sponsor['alt'] ); ?>" />
                     </div>
                 <?php endif; ?>

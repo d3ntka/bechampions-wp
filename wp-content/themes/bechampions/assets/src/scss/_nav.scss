@@ -118,6 +118,8 @@
 
 
 .sponsors{
+    position: relative;
+    z-index: 150;
     &__cont{
     }
     padding-top: 3rem;
@@ -147,9 +149,10 @@
         align-items: center;
         padding-right: 2rem;
 
+
         @include media-breakpoint-down(md){
             justify-content: center;
-            margin-bottom: 1rem;
+            padding-bottom: 4rem;
         }
     }
     &__fixed{
