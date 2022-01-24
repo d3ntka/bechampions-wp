@@ -1,107 +1,363 @@
-.swiper{
-    --swiper-navigation-size:1.2rem;
-    --swiper-pagination-bullet-inactive-opacity: 1;
-    --swiper-pagination-bullet-size: 2rem;
-    // width: 670px;
-    height: 270px;
-    overflow-x: visible;
-    overflow-y: hidden;
-
+.swiper {
+  --swiper-navigation-size: 1.2rem;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 2rem;
+  // width: 670px;
+  height: 270px;
+  overflow-x: visible;
+  overflow-y: hidden;
 }
 
 $swiper-nav-loc: 0px;
 .swiper-pagination-bullets {
-    --swiper-theme-color: #{$primary};
-    left: $swiper-nav-loc;
-    top: 50%;
-    -webkit-transform: translate3d(0,-50%,0);
-    transform: translate3d(0,-50%,0);
-    width: fit-content;
+  --swiper-theme-color: #{$primary};
+  left: $swiper-nav-loc;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  width: fit-content;
 }
 .swiper-pagination-bullet {
-    border: 2px solid #fff;
-    --swiper-navigation-size:2rem;
-    --swiper-pagination-bullet-inactive-color: transparent;
+  border: 2px solid #fff;
+  --swiper-navigation-size: 2rem;
+  --swiper-pagination-bullet-inactive-color: transparent;
 }
 .swiper-pagination-bullet-active {
-    border: 2px solid $primary;
-
+  border: 2px solid $primary;
 }
 
-.swiper-button-prev, .swiper-rtl .swiper-button-next {
-    --swiper-theme-color: #fff;
-    right: auto;
-    left: $swiper-nav-loc;
-    transform: rotate(90deg) translateY(-50%);
-    top: 30%;
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  --swiper-theme-color: #fff;
+  right: auto;
+  left: $swiper-nav-loc;
+  transform: rotate(90deg) translateY(-50%);
+  top: 30%;
 }
 
-.swiper-button-next, .swiper-rtl .swiper-button-prev {
-    --swiper-theme-color: #fff;
-    right: auto;
-    left: $swiper-nav-loc;
-    transform: rotate(90deg) translateY(-50%);
-    top: 70%;
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  --swiper-theme-color: #fff;
+  right: auto;
+  left: $swiper-nav-loc;
+  transform: rotate(90deg) translateY(-50%);
+  top: 70%;
 }
 
-.swiper-slide{
-    padding: 1rem 0rem 0 5rem;
+.swiper-slide {
+  padding: 1rem 0rem 0 5rem;
 }
-
-
 
 // EVENT CALENDAR
-.home{
-    .mec-event-article{
-        background-color: rgba(#fff,0.1);
-        // backdrop-filter: blur(19px);
+.home {
+  .mec-event-article {
+    background-color: rgba(#fff, 0.1);
+    // backdrop-filter: blur(19px);
+  }
+  @supports (backdrop-filter: blur(19px)) {
+    .mec-event-article {
+      backdrop-filter: blur(19px);
     }
-    @supports (backdrop-filter: blur(19px)){
-        .mec-event-article{
-            backdrop-filter: blur(19px);
-        }
-    }
-    .mec-month-divider {
-        display: none;
-    }
-    .mec-event-list-classic .mec-event-title {
-        margin-top: 0;
-    }
-    .mec-event-date{
-        float: right;
-    }
-    .mec-event-list-classic .mec-event-article {
-        padding: 3.2rem 4.5rem 3.4rem 5rem;
-    }
-    .mec-event-time{
-        display: none;
-    }
+  }
+  .mec-month-divider {
+    display: none;
+  }
+  .mec-event-list-classic .mec-event-title {
+    margin-top: 0;
+  }
+  .mec-event-date {
+    float: right;
+  }
+  .mec-event-list-classic .mec-event-article {
+    padding: 3.2rem 4.5rem 3.4rem 5rem;
+  }
+  .mec-event-time {
+    display: none;
+  }
+
+  .mec-event-list-classic .mec-event-date span {
+    margin-bottom: 0;
+  }
+
+  .mec-event-list-classic .mec-event-date,
+  .mec-event-list-classic .mec-event-time {
+    margin-right: 0;
+  }
+
+  .mec-event-list-classic .mec-event-detail {
+    line-height: 1.5;
+  }
+  
 }
 
-
-
-.mec-start-date-label,.mec-month-divider{
+.mec-start-date-label,
+.mec-month-divider {
+  color: #fff;
+  span {
     color: #fff;
-    span{
-        color: #fff;
-    }
+  }
 }
 
-.mec-dark-mode .event-carousel-type2-head, .mec-dark-mode .mec-box-calendar.mec-calendar .mec-calendar-table-head dt, .mec-dark-mode .mec-calendar .mec-calendar-side .mec-next-month, .mec-dark-mode .mec-calendar .mec-calendar-side .mec-previous-month, .mec-dark-mode .mec-calendar .mec-event-article:hover, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-a-month, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-d-table .mec-daily-view-day, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-d-table a, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-d-table a.mec-table-d-next, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-d-table a.mec-table-d-prev, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-d-table dl dt, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-next-month, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-previous-month, .mec-dark-mode .mec-calendar.mec-event-calendar-classic .mec-calendar-events-sec .mec-event-article:hover, .mec-dark-mode .mec-calendar.mec-event-calendar-classic .mec-selected-day, .mec-dark-mode .mec-calendar.mec-event-calendar-classic dt.mec-selected-day:hover, .mec-dark-mode .mec-calendar.mec-yearly-calendar .mec-calendar-table-head dl dt, .mec-dark-mode .mec-event-carousel-content, .mec-dark-mode .mec-event-cost, .mec-dark-mode .mec-event-countdown-style1 .mec-event-countdown-part3 .mec-event-button, .mec-dark-mode .mec-event-footer, .mec-dark-mode .mec-event-grid-classic .mec-event-content .mec-wrap .mec-totalcal-box .mec-totalcal-view span, .mec-dark-mode .mec-event-list-minimal a.mec-detail-button, .mec-dark-mode .mec-event-list-modern .mec-btn-wrapper .mec-booking-button, .mec-dark-mode .mec-event-list-standard .mec-topsec, .mec-dark-mode .mec-event-more-info, .mec-dark-mode .mec-event-website, .mec-dark-mode .mec-events-agenda-wrap, .mec-dark-mode .mec-events-meta-date, .mec-dark-mode .mec-events-meta-group-tags a, .mec-dark-mode .mec-events-toggle .mec-toggle-item-inner, .mec-dark-mode .mec-fes-form, .mec-dark-mode .mec-fes-form input[type="email"], .mec-dark-mode .mec-fes-form input[type="number"], .mec-dark-mode .mec-fes-form input[type="password"], .mec-dark-mode .mec-fes-form input[type="tel"], .mec-dark-mode .mec-fes-form input[type="text"], .mec-dark-mode .mec-fes-form select, .mec-dark-mode .mec-fes-form textarea, .mec-dark-mode .mec-fes-list, .mec-dark-mode .mec-hourly-schedule-speaker-info, .mec-dark-mode .mec-load-more-button, .mec-dark-mode .mec-map-lightbox-wp, .mec-dark-mode .mec-masonry-item-wrap .mec-event-grid-modern .event-grid-modern-head, .mec-dark-mode .mec-related-event-content, .mec-dark-mode .mec-single-event .mec-event-exporting .mec-export-details a, .mec-dark-mode .mec-single-event .mec-events-meta-group-booking, .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="date"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="email"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="number"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="password"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="tel"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="text"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking select, .mec-dark-mode .mec-single-event .mec-events-meta-group-booking textarea, .mec-dark-mode .mec-single-event .mec-events-meta-group-countdown, .mec-dark-mode .mec-single-event .mec-frontbox, .mec-dark-mode .mec-single-event .mec-speakers-details ul li, .mec-dark-mode .mec-single-event-additional-organizers, .mec-dark-mode .mec-single-event-category, .mec-dark-mode .mec-single-event-date, .mec-dark-mode .mec-single-event-label, .mec-dark-mode .mec-single-event-location, .mec-dark-mode .mec-single-event-organizer, .mec-dark-mode .mec-single-event-time, .mec-dark-mode .mec-single-modern .col-md-4 .mec-frontbox, .mec-dark-mode .mec-slider-t1-wrap, .mec-dark-mode .mec-timetable-events-list .mec-timetable-event, .mec-dark-mode .mec-timetable-t2-wrap, .mec-dark-mode .mec-ttt2-title, .mec-dark-mode .mec-wrap .mec-event-countdown-style1, .mec-dark-mode .mec-wrap .mec-event-countdown-style2, .mec-dark-mode .mec-wrap .mec-totalcal-box, .mec-dark-mode .mec-wrap .mec-totalcal-box i, .mec-dark-mode .mec-wrap .mec-totalcal-box input, .mec-dark-mode .mec-wrap .mec-totalcal-box select, .mec-dark-mode .mec-yearly-view-wrap .mec-yearly-title-sec .mec-next-year:hover, .mec-dark-mode .mec-yearly-view-wrap .mec-yearly-title-sec .mec-previous-year:hover, .mec-dark-mode.mec-wrap .mec-totalcal-box .mec-totalcal-view span, .mec-dark-mode.mec-wrap .mec-totalcal-box i, .mec-dark-mode.mec-wrap .mec-totalcal-box input, .mec-dark-mode.mec-wrap .mec-totalcal-box select {
-    background-color: rgba(#282828,0.2);
-    @supports (backdrop-filter: blur(19px)){
-        backdrop-filter: blur(19px);
-    }
+.mec-dark-mode .event-carousel-type2-head,
+.mec-dark-mode .mec-box-calendar.mec-calendar .mec-calendar-table-head dt,
+.mec-dark-mode .mec-calendar .mec-calendar-side .mec-next-month,
+.mec-dark-mode .mec-calendar .mec-calendar-side .mec-previous-month,
+.mec-dark-mode .mec-calendar .mec-event-article:hover,
+.mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-a-month,
+.mec-dark-mode
+  .mec-calendar.mec-calendar-daily
+  .mec-calendar-d-table
+  .mec-daily-view-day,
+.mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-d-table a,
+.mec-dark-mode
+  .mec-calendar.mec-calendar-daily
+  .mec-calendar-d-table
+  a.mec-table-d-next,
+.mec-dark-mode
+  .mec-calendar.mec-calendar-daily
+  .mec-calendar-d-table
+  a.mec-table-d-prev,
+.mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-d-table dl dt,
+.mec-dark-mode .mec-calendar.mec-calendar-daily .mec-next-month,
+.mec-dark-mode .mec-calendar.mec-calendar-daily .mec-previous-month,
+.mec-dark-mode
+  .mec-calendar.mec-event-calendar-classic
+  .mec-calendar-events-sec
+  .mec-event-article:hover,
+.mec-dark-mode .mec-calendar.mec-event-calendar-classic .mec-selected-day,
+.mec-dark-mode
+  .mec-calendar.mec-event-calendar-classic
+  dt.mec-selected-day:hover,
+.mec-dark-mode .mec-calendar.mec-yearly-calendar .mec-calendar-table-head dl dt,
+.mec-dark-mode .mec-event-carousel-content,
+.mec-dark-mode .mec-event-cost,
+.mec-dark-mode
+  .mec-event-countdown-style1
+  .mec-event-countdown-part3
+  .mec-event-button,
+.mec-dark-mode .mec-event-footer,
+.mec-dark-mode
+  .mec-event-grid-classic
+  .mec-event-content
+  .mec-wrap
+  .mec-totalcal-box
+  .mec-totalcal-view
+  span,
+.mec-dark-mode .mec-event-list-minimal a.mec-detail-button,
+.mec-dark-mode .mec-event-list-modern .mec-btn-wrapper .mec-booking-button,
+.mec-dark-mode .mec-event-list-standard .mec-topsec,
+.mec-dark-mode .mec-event-more-info,
+.mec-dark-mode .mec-event-website,
+.mec-dark-mode .mec-events-agenda-wrap,
+.mec-dark-mode .mec-events-meta-date,
+.mec-dark-mode .mec-events-meta-group-tags a,
+.mec-dark-mode .mec-events-toggle .mec-toggle-item-inner,
+.mec-dark-mode .mec-fes-form,
+.mec-dark-mode .mec-fes-form input[type="email"],
+.mec-dark-mode .mec-fes-form input[type="number"],
+.mec-dark-mode .mec-fes-form input[type="password"],
+.mec-dark-mode .mec-fes-form input[type="tel"],
+.mec-dark-mode .mec-fes-form input[type="text"],
+.mec-dark-mode .mec-fes-form select,
+.mec-dark-mode .mec-fes-form textarea,
+.mec-dark-mode .mec-fes-list,
+.mec-dark-mode .mec-hourly-schedule-speaker-info,
+.mec-dark-mode .mec-load-more-button,
+.mec-dark-mode .mec-map-lightbox-wp,
+.mec-dark-mode
+  .mec-masonry-item-wrap
+  .mec-event-grid-modern
+  .event-grid-modern-head,
+.mec-dark-mode .mec-related-event-content,
+.mec-dark-mode .mec-single-event .mec-event-exporting .mec-export-details a,
+.mec-dark-mode .mec-single-event .mec-events-meta-group-booking,
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="date"],
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="email"],
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="number"],
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="password"],
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="tel"],
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="text"],
+.mec-dark-mode .mec-single-event .mec-events-meta-group-booking select,
+.mec-dark-mode .mec-single-event .mec-events-meta-group-booking textarea,
+.mec-dark-mode .mec-single-event .mec-events-meta-group-countdown,
+.mec-dark-mode .mec-single-event .mec-frontbox,
+.mec-dark-mode .mec-single-event .mec-speakers-details ul li,
+.mec-dark-mode .mec-single-event-additional-organizers,
+.mec-dark-mode .mec-single-event-category,
+.mec-dark-mode .mec-single-event-date,
+.mec-dark-mode .mec-single-event-label,
+.mec-dark-mode .mec-single-event-location,
+.mec-dark-mode .mec-single-event-organizer,
+.mec-dark-mode .mec-single-event-time,
+.mec-dark-mode .mec-single-modern .col-md-4 .mec-frontbox,
+.mec-dark-mode .mec-slider-t1-wrap,
+.mec-dark-mode .mec-timetable-events-list .mec-timetable-event,
+.mec-dark-mode .mec-timetable-t2-wrap,
+.mec-dark-mode .mec-ttt2-title,
+.mec-dark-mode .mec-wrap .mec-event-countdown-style1,
+.mec-dark-mode .mec-wrap .mec-event-countdown-style2,
+.mec-dark-mode .mec-wrap .mec-totalcal-box,
+.mec-dark-mode .mec-wrap .mec-totalcal-box i,
+.mec-dark-mode .mec-wrap .mec-totalcal-box input,
+.mec-dark-mode .mec-wrap .mec-totalcal-box select,
+.mec-dark-mode .mec-yearly-view-wrap .mec-yearly-title-sec .mec-next-year:hover,
+.mec-dark-mode
+  .mec-yearly-view-wrap
+  .mec-yearly-title-sec
+  .mec-previous-year:hover,
+.mec-dark-mode.mec-wrap .mec-totalcal-box .mec-totalcal-view span,
+.mec-dark-mode.mec-wrap .mec-totalcal-box i,
+.mec-dark-mode.mec-wrap .mec-totalcal-box input,
+.mec-dark-mode.mec-wrap .mec-totalcal-box select {
+  background-color: rgba(#282828, 0.2);
+  @supports (backdrop-filter: blur(19px)) {
+    backdrop-filter: blur(19px);
+  }
 }
 
-.mec-dark-mode .mec-wrap .mec-totalcal-box select{
-    // color: $dark;
+.mec-dark-mode .mec-wrap .mec-totalcal-box select {
+  // color: $dark;
 }
-
 
 /* frontend.min.css | http://bechampions.test/wp-content/plugins/modern-events-calendar-lite/assets/css/frontend.min.css?ver=5.22.3 */
 
-.mec-dark-mode .entry-content .mec-wrap h1, .mec-dark-mode .entry-content .mec-wrap h2, .mec-dark-mode .entry-content .mec-wrap h3, .mec-dark-mode .entry-content .mec-wrap h4, .mec-dark-mode .entry-content .mec-wrap h5, .mec-dark-mode .entry-content .mec-wrap h6, .mec-dark-mode .mec-breadcrumbs a, .mec-dark-mode .mec-calendar .mec-event-article .mec-event-title a, .mec-dark-mode .mec-calendar dt, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-a-month .mec-next-month, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-a-month .mec-previous-month, .mec-dark-mode .mec-calendar.mec-calendar-daily .mec-calendar-d-table .mec-daily-view-day.mec-has-event, .mec-dark-mode .mec-calendar.mec-event-container-simple dl dt.mec-calendar-day, .mec-dark-mode .mec-event-carousel-content .mec-event-carousel-title a, .mec-dark-mode .mec-event-content p, .mec-dark-mode .mec-event-grid-classic .mec-event-title a, .mec-dark-mode .mec-event-grid-clean .mec-event-title a, .mec-dark-mode .mec-event-grid-minimal .mec-event-date span, .mec-dark-mode .mec-event-grid-minimal .mec-event-title a, .mec-dark-mode .mec-event-grid-modern .mec-event-title a, .mec-dark-mode .mec-event-grid-simple .mec-event-title a, .mec-dark-mode .mec-event-list-classic .mec-event-title a, .mec-dark-mode .mec-event-list-minimal .mec-event-title a, .mec-dark-mode .mec-event-list-minimal a.mec-detail-button, .mec-dark-mode .mec-event-list-modern .mec-btn-wrapper .mec-booking-button, .mec-dark-mode .mec-event-list-standard .mec-event-title a, .mec-dark-mode .mec-events-meta-group-booking ul.mec-book-price-details li, .mec-dark-mode .mec-events-meta-group-booking ul.mec-book-price-details li span.mec-book-price-detail-amount, .mec-dark-mode .mec-events-meta-group-tags a, .mec-dark-mode .mec-events-toggle .mec-toggle-item-inner i, .mec-dark-mode .mec-fes-form, .mec-dark-mode .mec-fes-form input[type="email"], .mec-dark-mode .mec-fes-form input[type="number"], .mec-dark-mode .mec-fes-form input[type="password"], .mec-dark-mode .mec-fes-form input[type="tel"], .mec-dark-mode .mec-fes-form input[type="text"], .mec-dark-mode .mec-fes-form label, .mec-dark-mode .mec-fes-form select, .mec-dark-mode .mec-fes-form textarea, .mec-dark-mode .mec-fes-list, .mec-dark-mode .mec-hourly-schedule-speaker-contact-information a i, .mec-dark-mode .mec-hourly-schedule-speaker-description, .mec-dark-mode .mec-hourly-schedule-speaker-name, .mec-dark-mode .mec-load-more-button, .mec-dark-mode .mec-next-event-details abbr, .mec-dark-mode .mec-related-event-content h5 a, .mec-dark-mode .mec-related-event-content span, .mec-dark-mode .mec-single-event .mec-event-meta dt, .mec-dark-mode .mec-single-event .mec-event-meta h3, .mec-dark-mode .mec-single-event .mec-events-meta-group-booking form > h4, .mec-dark-mode .mec-single-event .mec-events-meta-group-booking h5 span, .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="date"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="email"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="number"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="password"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="tel"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking input[type="text"], .mec-dark-mode .mec-single-event .mec-events-meta-group-booking label, .mec-dark-mode .mec-single-event .mec-events-meta-group-booking select, .mec-dark-mode .mec-single-event .mec-events-meta-group-booking textarea, .mec-dark-mode .mec-single-event .mec-frontbox-title, .mec-dark-mode .mec-single-event .mec-speakers-details ul li .mec-speaker-job-title, .mec-dark-mode .mec-single-modern .mec-single-event-bar > div h3, .mec-dark-mode .mec-slider-t1-wrap .mec-owl-theme .owl-nav .owl-next i, .mec-dark-mode .mec-slider-t1-wrap .mec-owl-theme .owl-nav .owl-prev i, .mec-dark-mode .mec-timeline-main-content h4 a, .mec-dark-mode .mec-timetable-event .mec-timetable-event-time, .mec-dark-mode .mec-timetable-events-list .mec-timetable-event span a, .mec-dark-mode .mec-tooltip-event-title, .mec-dark-mode .mec-ttt2-title, .mec-dark-mode .mec-wrap, .mec-dark-mode .mec-wrap .mec-event-list-modern .mec-event-title a, .mec-dark-mode .mec-wrap .mec-event-schedule-content a, .mec-dark-mode .mec-wrap .mec-single-title, .mec-dark-mode .mec-wrap .mec-totalcal-box .mec-totalcal-view span, .mec-dark-mode .mec-wrap .mec-totalcal-box input, .mec-dark-mode .mec-wrap .mec-totalcal-box select, .mec-dark-mode .mec-wrap h1, .mec-dark-mode .mec-wrap h2, .mec-dark-mode .mec-wrap h3, .mec-dark-mode .mec-wrap h4, .mec-dark-mode .mec-wrap h5, .mec-dark-mode .mec-wrap h6, .mec-dark-mode .mec-wrap p {
-    color: auto;
-  }
-  
+.mec-dark-mode .entry-content .mec-wrap h1,
+.mec-dark-mode .entry-content .mec-wrap h2,
+.mec-dark-mode .entry-content .mec-wrap h3,
+.mec-dark-mode .entry-content .mec-wrap h4,
+.mec-dark-mode .entry-content .mec-wrap h5,
+.mec-dark-mode .entry-content .mec-wrap h6,
+.mec-dark-mode .mec-breadcrumbs a,
+.mec-dark-mode .mec-calendar .mec-event-article .mec-event-title a,
+.mec-dark-mode .mec-calendar dt,
+.mec-dark-mode
+  .mec-calendar.mec-calendar-daily
+  .mec-calendar-a-month
+  .mec-next-month,
+.mec-dark-mode
+  .mec-calendar.mec-calendar-daily
+  .mec-calendar-a-month
+  .mec-previous-month,
+.mec-dark-mode
+  .mec-calendar.mec-calendar-daily
+  .mec-calendar-d-table
+  .mec-daily-view-day.mec-has-event,
+.mec-dark-mode .mec-calendar.mec-event-container-simple dl dt.mec-calendar-day,
+.mec-dark-mode .mec-event-carousel-content .mec-event-carousel-title a,
+.mec-dark-mode .mec-event-content p,
+.mec-dark-mode .mec-event-grid-classic .mec-event-title a,
+.mec-dark-mode .mec-event-grid-clean .mec-event-title a,
+.mec-dark-mode .mec-event-grid-minimal .mec-event-date span,
+.mec-dark-mode .mec-event-grid-minimal .mec-event-title a,
+.mec-dark-mode .mec-event-grid-modern .mec-event-title a,
+.mec-dark-mode .mec-event-grid-simple .mec-event-title a,
+.mec-dark-mode .mec-event-list-classic .mec-event-title a,
+.mec-dark-mode .mec-event-list-minimal .mec-event-title a,
+.mec-dark-mode .mec-event-list-minimal a.mec-detail-button,
+.mec-dark-mode .mec-event-list-modern .mec-btn-wrapper .mec-booking-button,
+.mec-dark-mode .mec-event-list-standard .mec-event-title a,
+.mec-dark-mode .mec-events-meta-group-booking ul.mec-book-price-details li,
+.mec-dark-mode
+  .mec-events-meta-group-booking
+  ul.mec-book-price-details
+  li
+  span.mec-book-price-detail-amount,
+.mec-dark-mode .mec-events-meta-group-tags a,
+.mec-dark-mode .mec-events-toggle .mec-toggle-item-inner i,
+.mec-dark-mode .mec-fes-form,
+.mec-dark-mode .mec-fes-form input[type="email"],
+.mec-dark-mode .mec-fes-form input[type="number"],
+.mec-dark-mode .mec-fes-form input[type="password"],
+.mec-dark-mode .mec-fes-form input[type="tel"],
+.mec-dark-mode .mec-fes-form input[type="text"],
+.mec-dark-mode .mec-fes-form label,
+.mec-dark-mode .mec-fes-form select,
+.mec-dark-mode .mec-fes-form textarea,
+.mec-dark-mode .mec-fes-list,
+.mec-dark-mode .mec-hourly-schedule-speaker-contact-information a i,
+.mec-dark-mode .mec-hourly-schedule-speaker-description,
+.mec-dark-mode .mec-hourly-schedule-speaker-name,
+.mec-dark-mode .mec-load-more-button,
+.mec-dark-mode .mec-next-event-details abbr,
+.mec-dark-mode .mec-related-event-content h5 a,
+.mec-dark-mode .mec-related-event-content span,
+.mec-dark-mode .mec-single-event .mec-event-meta dt,
+.mec-dark-mode .mec-single-event .mec-event-meta h3,
+.mec-dark-mode .mec-single-event .mec-events-meta-group-booking form > h4,
+.mec-dark-mode .mec-single-event .mec-events-meta-group-booking h5 span,
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="date"],
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="email"],
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="number"],
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="password"],
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="tel"],
+.mec-dark-mode
+  .mec-single-event
+  .mec-events-meta-group-booking
+  input[type="text"],
+.mec-dark-mode .mec-single-event .mec-events-meta-group-booking label,
+.mec-dark-mode .mec-single-event .mec-events-meta-group-booking select,
+.mec-dark-mode .mec-single-event .mec-events-meta-group-booking textarea,
+.mec-dark-mode .mec-single-event .mec-frontbox-title,
+.mec-dark-mode
+  .mec-single-event
+  .mec-speakers-details
+  ul
+  li
+  .mec-speaker-job-title,
+.mec-dark-mode .mec-single-modern .mec-single-event-bar > div h3,
+.mec-dark-mode .mec-slider-t1-wrap .mec-owl-theme .owl-nav .owl-next i,
+.mec-dark-mode .mec-slider-t1-wrap .mec-owl-theme .owl-nav .owl-prev i,
+.mec-dark-mode .mec-timeline-main-content h4 a,
+.mec-dark-mode .mec-timetable-event .mec-timetable-event-time,
+.mec-dark-mode .mec-timetable-events-list .mec-timetable-event span a,
+.mec-dark-mode .mec-tooltip-event-title,
+.mec-dark-mode .mec-ttt2-title,
+.mec-dark-mode .mec-wrap,
+.mec-dark-mode .mec-wrap .mec-event-list-modern .mec-event-title a,
+.mec-dark-mode .mec-wrap .mec-event-schedule-content a,
+.mec-dark-mode .mec-wrap .mec-single-title,
+.mec-dark-mode .mec-wrap .mec-totalcal-box .mec-totalcal-view span,
+.mec-dark-mode .mec-wrap .mec-totalcal-box input,
+.mec-dark-mode .mec-wrap .mec-totalcal-box select,
+.mec-dark-mode .mec-wrap h1,
+.mec-dark-mode .mec-wrap h2,
+.mec-dark-mode .mec-wrap h3,
+.mec-dark-mode .mec-wrap h4,
+.mec-dark-mode .mec-wrap h5,
+.mec-dark-mode .mec-wrap h6,
+.mec-dark-mode .mec-wrap p {
+  color: auto;
+}
