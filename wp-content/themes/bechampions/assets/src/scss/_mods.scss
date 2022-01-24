@@ -21,6 +21,7 @@ $swiper-nav-loc: 0px;
   border: 2px solid #fff;
   --swiper-navigation-size: 2rem;
   --swiper-pagination-bullet-inactive-color: transparent;
+  transition: 0.2s ease-in;
 }
 .swiper-pagination-bullet-active {
   border: 2px solid $primary;
