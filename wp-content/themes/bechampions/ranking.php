@@ -88,6 +88,8 @@ if ( $the_query->have_posts() ) { ?>
                     </div>
                 </div>
             </div>
+
+        
             <div class="col-lg-9 col-xl-8 team__player--cont">
                 <?php if ( have_rows( 'team_member' ) ) : ?>
                     <!-- <div class="team__player--cont"> -->
@@ -95,11 +97,13 @@ if ( $the_query->have_posts() ) { ?>
                         the_row(); ?>
                             <div class="team__player">
                                 <?php $team_member_img = get_sub_field( 'team_member_img' );
-                                if ( $team_member_img ) : ?>
+                                $size = 'small';
+                                if ( $team_member_img ) {
+                                    $url = wp_get_attachment_url( $team_member_img ); ?>
                                     <div class="team__player--img collapse collapsed" id="collapse-<?=$link?>">
-                                        <img src="<?php echo esc_url( $team_member_img['url'] ); ?>" alt="<?php echo esc_attr( $team_member_img['alt'] ); ?>" />
+	                                    <?php echo wp_get_attachment_image( $team_member_img, $size ); ?>
                                     </div>
-                                <?php endif; ?>
+                                <?php }; ?>
                                 <div class="collapse collapsed" id="collapse-<?=$link?>">
                                     <div class="team__player--spacer"></div>
                                 </div>
